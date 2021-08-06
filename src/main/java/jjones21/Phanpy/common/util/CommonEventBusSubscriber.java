@@ -19,12 +19,12 @@ import software.bernie.example.registry.EntityRegistry;
 @Mod.EventBusSubscriber(modid = Reference.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD)
 public class CommonEventBusSubscriber {
 
-	@SubscribeEvent
-    public void pickupItem(EntityItemPickupEvent event) {
-        System.out.println("Item picked up!");
-        TextComponent textcomponent = new TranslationTextComponent("hey");
-        event.getPlayer().sendMessage(textcomponent,event.getPlayer().getUUID());
-    }
+//	@SubscribeEvent
+//    public void pickupItem(EntityItemPickupEvent event) {
+//        System.out.println("Item picked up!");
+//        TextComponent textcomponent = new TranslationTextComponent("hey");
+//        event.getPlayer().sendMessage(textcomponent,event.getPlayer().getUUID());
+//    }
 	
 	@SubscribeEvent
 	public static void registerEntityAttributes(EntityAttributeCreationEvent event) {

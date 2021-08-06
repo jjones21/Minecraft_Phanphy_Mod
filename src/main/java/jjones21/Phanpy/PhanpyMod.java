@@ -33,8 +33,8 @@ public class PhanpyMod {
     	GeckoLib.initialize();
         // Register the setup method for modloading
         IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
-        bus.addListener(this::setup);
-        MinecraftForge.EVENT_BUS.register(ClientEventBusSubscriber.class);
+        //bus.addListener(this::setup);
+        //MinecraftForge.EVENT_BUS.register(ClientEventBusSubscriber.class);
         
 
         ItemInit.ITEMS.register(bus);

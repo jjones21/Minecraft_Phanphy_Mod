@@ -10,7 +10,7 @@ import net.minecraft.util.ResourceLocation;
 public class PancakeRender extends MobRenderer<PancakeEntity,PancakeModel>{
 
 	protected static final ResourceLocation TEXTURE = new ResourceLocation(Reference.MOD_ID,
-			"textures/entity/pancake.png");
+			"pancake.png");
 	
 	public PancakeRender(EntityRendererManager renderManagerIn) {
 		super(renderManagerIn, new PancakeModel(), 0.5f);
@@ -23,6 +23,6 @@ public class PancakeRender extends MobRenderer<PancakeEntity,PancakeModel>{
 	@Override
 	public ResourceLocation getTextureLocation(PancakeEntity p_110775_1_) {
 		// TODO Auto-generated method stub
-		return null;
+		return TEXTURE;
 	}
 }

@@ -10,13 +10,14 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.world.World;
 import net.minecraft.world.server.ServerWorld;
 
-public class PancakeEntity extends CreatureEntity{
+public class PancakeEntity extends AnimalEntity{
 
 	private FollowOwnerGoal follow;
 	private int pancakeTimer;
 	
 	public PancakeEntity(EntityType<? extends PancakeEntity> type, World worldIn) {
 		super(type, worldIn);
+		this.noCulling = true;
 		// TODO Auto-generated constructor stub
 	}
 
@@ -32,6 +33,11 @@ public class PancakeEntity extends CreatureEntity{
 		this.goalSelector.addGoal(1, new LookRandomlyGoal(this));
 		this.goalSelector.addGoal(2, new LookAtGoal(this, PlayerEntity.class, 6.0F));
 	}
+
+@Override
+public AgeableEntity getBreedOffspring(ServerWorld p_241840_1_, AgeableEntity p_241840_2_) {
+	return null;
+}
 	
 
 	
