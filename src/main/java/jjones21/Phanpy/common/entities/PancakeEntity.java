@@ -20,18 +20,13 @@ public class PancakeEntity extends AnimalEntity{
 		this.noCulling = true;
 		// TODO Auto-generated constructor stub
 	}
-
-//	@Override
-//	public AgeableEntity getBreedOffspring(ServerWorld p_241840_1_, AgeableEntity p_241840_2_) {
-//		// TODO Auto-generated method stub
-//		return null;
-//	}
 	
 	protected void registerGoals() {
 		super.registerGoals();
-		this.goalSelector.addGoal(0, new WaterAvoidingRandomWalkingGoal(this, 1.0D));
+		this.goalSelector.addGoal(0, new WaterAvoidingRandomWalkingGoal(this, 0.5D));
 		this.goalSelector.addGoal(1, new LookRandomlyGoal(this));
 		this.goalSelector.addGoal(2, new LookAtGoal(this, PlayerEntity.class, 6.0F));
+		this.goalSelector.addGoal(3, new SwimGoal(this));
 	}
 
 @Override
